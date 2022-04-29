@@ -1,0 +1,37 @@
+var contacts =
+[
+ {
+       "firstname": "amr0",
+       "lastname": "amr",
+       "numbers": "12345",
+       "likes": [ "let", "how" ]
+   },
+     {
+       "firstname": "amr10",
+       "lastname": "amr1",
+       "numbers": "123456",
+       "likes": [ "let1", "how1"]
+   },
+     {
+       "firstname": "amr20",
+       "lastname": "amr2",
+       "numbers": "1234567",
+       "likes": [ "let2","how2" ]
+   },
+     {
+       "firstname": "amr30",
+       "lastname": "amr3",
+       "numbers": "12345678",
+       "likes": [ "let3", "how3"]
+   }
+];
+function lookupforprofile(name , prop) {
+    for (var i = 0; i < contacts.lenght; i++){
+        if (contacts[i].firstname === name) {
+            return contacts[i][prop] || "no such property";
+        }
+    }
+    return "no such contact";
+}
+var data = lookupforprofile("amr20", "numbers")
+console.log(data)a
